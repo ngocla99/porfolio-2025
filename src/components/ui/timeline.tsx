@@ -73,10 +73,10 @@ function TimelineDot({
     <div
       data-orientation={orientation}
       className={cn(
-        "flex size-4 items-center justify-center empty:after:block empty:after:rounded-full empty:after:outline-current [&_svg]:size-4",
+        "flex size-4 items-center justify-center empty:after:block empty:after:rounded-full empty:after:outline-current [&_svg]:size-4 empty:after:bg-transparent empty:after:ring-1 empty:after:ring-body-darker empty:after:ring-inset bg-background",
         orientation === "vertical" && "mt-1",
         variant === "default" && "empty:after:size-2.5 empty:after:bg-current",
-        variant === "outline" && "empty:after:size-2 empty:after:outline",
+        variant === "outline" && "empty:after:size-2",
         className
       )}
       {...props}
@@ -91,7 +91,7 @@ function TimelineConnector({ className, ...props }: React.ComponentProps<"div">)
     <div
       data-orientation={orientation}
       className={cn(
-        "flex-1 bg-border",
+        "flex-1 bg-body-darker/50",
         orientation === "vertical" && "my-2 w-0.5",
         orientation === "horizontal" && "mx-2 h-0.5",
         className
