@@ -13,36 +13,36 @@ export function ProfileSection() {
       transition={{ duration: 0.6 }}
       className='flex flex-col items-start pt-12'
     >
-      <div className='relative'>
-        <div className='hidden lg:block absolute top-5 right-[-285px] w-full h-full'>
+      <div className='relative bio-text-shadow'>
+        <div className='hidden sm:block absolute top-5 right-[-285px] w-full h-full'>
           <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
         </div>
         <h1 className='custom-h1'>
-          LE ANH NGOC <span className='body-sm text-body-darker transition-colors hover:text-white'>/ @ngocla99</span>
+          LE ANH NGOC <span className='body-sm text-body-darker! transition-colors hover:text-white!'>/ @ngocla99</span>
         </h1>
-        <p className='my-4 font-proto text-xl leading-[1.25em] xs:text-2xl'>
-          Staff UI Engineer <br />
-          focused on interaction design.
+        <p className='my-4 font-proto text-xl leading-[1.35em] sm:text-2xl'>
+          Frontend Specialist <br />
+          with 4+ years experience.
         </p>
         <p className='body-lg text-balance max-w-[390px] text-body'>
-          Building fast apps that feel like a physical extension of your mind with considerate motion design for fluid
-          interfaces.
+          Building responsive applications that deliver exceptional user experiences with modern technologies and clean
+          code practices.
         </p>
         <p className='body-lg text-balance mt-6 max-w-[450px] text-body'>
-          I’m the person who can <span className='text-white'>bridge the gap between design and engineering</span> to
-          give your product that extra attention to detail to{" "}
-          <span className='text-white'>stand out from competitors. ✨</span>
+          I&apos;m the person who can <span className='text-white'>quickly adapt to new technologies</span> and take
+          ownership of tasks to <span className='text-white'>deliver high-quality solutions</span> that exceed
+          expectations. ✨
         </p>
       </div>
       <div className='mt-8'>
         <p className='text-balance flex items-center gap-2.5 font-proto text-xs text-warning sm:gap-2 sm:text-sm'>
           <span className='mb-[0.1em] h-1.5 w-1.5 shrink-0 rounded-full bg-warning'></span>
-          <span>Currently not taking on any new work.</span>
+          <span>Open to exciting opportunities globally.</span>
         </p>
         <div className='flex items-center gap-3 mt-4'>
           <div className='flex gap-3'>
             <a
-              href='mailto:website@wojtek.im'
+              href='mailto:your-email@example.com'
               className='flex items-center justify-center w-10 h-10 rounded-xl ring-1 ring-border hover:ring-2 hover:ring-accent active:scale-95 text-accent outline-none focus-visible:ring-2 focus-visible:ring-accent'
             >
               <svg
@@ -80,18 +80,18 @@ export function ProfileSection() {
             </button>
           </div>
           <p className='pl-0.5 body-sm'>
-            Want to chat either way? <br />
+            Want to discuss opportunities? <br />
             <span className='block'>Send me an email.</span>
           </p>
         </div>
         <p className='text-balance flex items-center gap-2.5 pt-5 font-proto text-xs text-body sm:gap-2 sm:text-sm'>
           or you can{" "}
-          <a className='text-link-hover text-friends' href='/friends'>
-            hire my friends
-          </a>
+          <ButtonLink className='text-friends text-sm' href='/projects'>
+            see my work
+          </ButtonLink>
         </p>
       </div>
-      <TimelineWork className='mt-14 w-full' />
+      <TimelineWork className='mt-14 w-full bio-text-shadow' />
       <h2 className='custom-h2'>Elsewhere</h2>
       <div className='grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8'>
         <ButtonLink>LINKEDIN</ButtonLink>

@@ -69,7 +69,12 @@ export function TimelineWork({ className }: { className?: string }) {
                 />
               )}
             </div>
-            <TimelineConnector className={cn("mx-0", index === 0 && "bg-gradient-to-r from-accent to-transparent")} />
+            <TimelineConnector
+              className={cn(
+                "mx-0",
+                index === 0 && "translate-x-[-2px] translate-y-[-0.5px] bg-gradient-to-r from-accent to-transparent"
+              )}
+            />
           </TimelineSeparator>
           <TimelineContent className='space-y-3'>
             <TimelineTitle className='flex items-center gap-3'>
