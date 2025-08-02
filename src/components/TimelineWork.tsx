@@ -96,7 +96,6 @@ export function TimelineWork({ className }: { className?: string }) {
       ))}
       <Link
         href='https://www.ewoosoft.com/'
-        // className='h-full whitespace-nowrap text-right font-proto text-sm text-body-dark outline-none transition-all hover:text-accent focus:text-accent focus-visible:rounded-lg focus-visible:ring-1 focus-visible:ring-accent md:right-0 md:active:scale-95'
         className='-right-6 h-full bg-gradient-to-r from-transparent to-black to-80% pl-24 pr-4 md:pl-12 md:pr-0 absolute -top-1 z-20 translate-y-[0.5px] whitespace-nowrap text-right font-proto text-sm text-body-dark outline-none transition-all hover:text-white focus:text-accent focus-visible:rounded-lg focus-visible:ring-1 focus-visible:ring-accent md:right-0 md:active:scale-95'
       >
         All →

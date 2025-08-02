@@ -16,7 +16,7 @@ export function NewsletterSection() {
       transition={{ duration: 0.6 }}
       className='py-8'
     >
-      <h2 className='text-2xl font-semibold mb-4'>Newsletter</h2>
+      <h2 className='custom-h2 mb-4'>Newsletter</h2>
       <p className='mb-4 text-muted-foreground'>
         Get notified when I write something new or launch a new project right into your inbox.
       </p>

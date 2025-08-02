@@ -175,6 +175,10 @@
     @apply text-accent font-proto text-2xl;
   }
 
+  .custom-h2 {
+    @apply font-proto mb-4 text-body-dark text-sm leading-[1.25em];
+  }
+
   .body-lg {
     @apply text-lg leading-[1.75] text-body tracking-[-0.012em];
   }

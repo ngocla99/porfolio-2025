@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { TimelineWork } from "./TimelineWork";
+import { ButtonLink } from "./ui/button-link";
+import Orb from "./ui/orb";
 
 export function ProfileSection() {
   return (
@@ -10,23 +13,27 @@ export function ProfileSection() {
       transition={{ duration: 0.6 }}
       className='flex flex-col items-start pt-12'
     >
-      <h1 className='custom-h1'>
-        LE ANH NGOC <span className='body-sm text-body-darker transition-colors hover:text-white'>/ @ngocla99</span>
-      </h1>
-      <p className='my-4 font-proto text-xl leading-[1.25em] xs:text-2xl'>
-        Staff UI Engineer <br />
-        focused on interaction design.
-      </p>
-      <p className='body-lg text-balance max-w-[390px] text-body'>
-        Building fast apps that feel like a physical extension of your mind with considerate motion design for fluid
-        interfaces.
-      </p>
-      <p className='body-lg text-balance mt-6 max-w-[450px] text-body'>
-        I’m the person who can <span className='text-white'>bridge the gap between design and engineering</span> to give
-        your product that extra attention to detail to{" "}
-        <span className='text-white'>stand out from competitors. ✨</span>
-      </p>
-
+      <div className='relative'>
+        <div className='hidden lg:block absolute top-5 right-[-285px] w-full h-full'>
+          <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
+        </div>
+        <h1 className='custom-h1'>
+          LE ANH NGOC <span className='body-sm text-body-darker transition-colors hover:text-white'>/ @ngocla99</span>
+        </h1>
+        <p className='my-4 font-proto text-xl leading-[1.25em] xs:text-2xl'>
+          Staff UI Engineer <br />
+          focused on interaction design.
+        </p>
+        <p className='body-lg text-balance max-w-[390px] text-body'>
+          Building fast apps that feel like a physical extension of your mind with considerate motion design for fluid
+          interfaces.
+        </p>
+        <p className='body-lg text-balance mt-6 max-w-[450px] text-body'>
+          I’m the person who can <span className='text-white'>bridge the gap between design and engineering</span> to
+          give your product that extra attention to detail to{" "}
+          <span className='text-white'>stand out from competitors. ✨</span>
+        </p>
+      </div>
       <div className='mt-8'>
         <p className='text-balance flex items-center gap-2.5 font-proto text-xs text-warning sm:gap-2 sm:text-sm'>
           <span className='mb-[0.1em] h-1.5 w-1.5 shrink-0 rounded-full bg-warning'></span>
@@ -83,6 +90,15 @@ export function ProfileSection() {
             hire my friends
           </a>
         </p>
+      </div>
+      <TimelineWork className='mt-14' />
+      <h2 className='custom-h2'>Elsewhere</h2>
+      <div className='grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8'>
+        <ButtonLink>LINKEDIN</ButtonLink>
+        <ButtonLink>GITHUB</ButtonLink>
+        <ButtonLink>TWITTER</ButtonLink>
+        <ButtonLink>READ.CV</ButtonLink>
+        <ButtonLink>FACEBOOK</ButtonLink>
       </div>
     </motion.section>
   );

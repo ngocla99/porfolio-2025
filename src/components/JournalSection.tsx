@@ -17,14 +17,14 @@ export function JournalSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="py-8"
+      className='py-8'
     >
-      <h2 className="text-2xl font-semibold mb-6">Journal</h2>
-      <div className="flex flex-col gap-4">
+      <h2 className='custom-h2 mb-6'>Journal</h2>
+      <div className='flex flex-col gap-4'>
         {posts.map((post) => (
-          <Card key={post.title} className="p-4 flex flex-col gap-1">
-            <div className="font-medium text-base">{post.title}</div>
-            <div className="text-xs text-muted-foreground">{post.date}</div>
+          <Card key={post.title} className='p-4 flex flex-col gap-1'>
+            <div className='font-medium text-base'>{post.title}</div>
+            <div className='text-xs text-muted-foreground'>{post.date}</div>
           </Card>
         ))}
       </div>
