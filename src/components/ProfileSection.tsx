@@ -91,7 +91,7 @@ export function ProfileSection() {
           </a>
         </p>
       </div>
-      <TimelineWork className='mt-14' />
+      <TimelineWork className='mt-14 w-full' />
       <h2 className='custom-h2'>Elsewhere</h2>
       <div className='grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8'>
         <ButtonLink>LINKEDIN</ButtonLink>

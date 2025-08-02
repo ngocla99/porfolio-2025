@@ -71,14 +71,14 @@ export function TimelineWork({ className }: { className?: string }) {
             </div>
             <TimelineConnector className={cn("mx-0", index === 0 && "bg-gradient-to-r from-accent to-transparent")} />
           </TimelineSeparator>
-          <TimelineContent className='space-y-2'>
-            <TimelineTitle className='flex items-center gap-2'>
+          <TimelineContent className='space-y-3'>
+            <TimelineTitle className='flex items-center gap-3'>
               <Image
                 src={item.imgUrl}
                 alt={item.title}
-                width={48}
-                height={48}
-                className='size-12 border border-[#dedede] rounded-md object-contain bg-white'
+                width={36}
+                height={36}
+                className='size-9 border border-[#dedede] rounded-md object-contain bg-white'
               />
               <Link
                 href={item.link}
