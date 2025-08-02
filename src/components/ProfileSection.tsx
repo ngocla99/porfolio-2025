@@ -94,11 +94,22 @@ export function ProfileSection() {
       <TimelineWork className='mt-14 w-full bio-text-shadow' />
       <h2 className='custom-h2'>Elsewhere</h2>
       <div className='grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8'>
-        <ButtonLink>LINKEDIN</ButtonLink>
-        <ButtonLink>GITHUB</ButtonLink>
-        <ButtonLink>TWITTER</ButtonLink>
-        <ButtonLink>READ.CV</ButtonLink>
-        <ButtonLink>FACEBOOK</ButtonLink>
+        <ButtonLink href='https://www.linkedin.com/in/ngocla99' target='_blank'>
+          LINKEDIN
+        </ButtonLink>
+        <ButtonLink href='https://github.com/ngocla99' target='_blank'>
+          GITHUB
+        </ButtonLink>
+        <ButtonLink href='https://read.cv/ngocla99' target='_blank'>
+          READ.CV
+        </ButtonLink>
+        <ButtonLink href='https://www.facebook.com/ngocla99' target='_blank'>
+          FACEBOOK
+        </ButtonLink>
+        <ButtonLink href='https://x.com/ngoclias_213' target='_blank'>
+          TWITTER
+        </ButtonLink>
+        <div className='font-proto text-body'>ngocla99</div>
       </div>
     </motion.section>
   );
