@@ -47,9 +47,17 @@ const timelineData: TimelineItemData[] = [
   },
 ];
 
-export function TimelineWork({ className, onNavigate }: { className?: string; onNavigate?: (path: string) => void }) {
+export function TimelineWork({
+  orientation = "horizontal",
+  className,
+  onNavigate,
+}: {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+  onNavigate?: (path: string) => void;
+}) {
   return (
-    <Timeline orientation='horizontal' className={cn("min-h-40 relative", className)}>
+    <Timeline orientation={orientation} className={cn("min-h-40 relative", className)}>
       {timelineData.map((item, index) => (
         <TimelineItem key={item.id} className='flex-1'>
           <TimelineSeparator className='relative'>

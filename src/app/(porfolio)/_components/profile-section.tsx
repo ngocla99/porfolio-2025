@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Orb } from "@/components/ui/orb";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { TimelineWork } from "./TimelineWork";
+import { TimelineWork } from "./time-line-work";
 import React from "react";
 import { useRouter } from "next/navigation";
 
