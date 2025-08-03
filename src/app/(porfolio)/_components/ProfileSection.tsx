@@ -5,8 +5,19 @@ import { Orb } from "@/components/ui/orb";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { TimelineWork } from "./TimelineWork";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 export function ProfileSection() {
+  // FIXME: This is a hack to prevent white flash when the user navigates to the projects page
+  const [showOrb, setShowOrb] = React.useState(true);
+  const router = useRouter();
+
+  const handleNavigation = (path: string) => {
+    setShowOrb(false);
+    router.push(path);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -19,7 +30,13 @@ export function ProfileSection() {
         <div
           className={cn("hidden sm:block absolute bg-transparent top-5 right-[-300px] w-full h-full overflow-hidden")}
         >
-          <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
+          <Orb
+            hoverIntensity={0.5}
+            rotateOnHover={true}
+            hue={0}
+            forceHoverState={false}
+            className={cn(showOrb ? "opacity-100" : "opacity-0")}
+          />
         </div>
         <h1 className='custom-h1'>
           LE ANH NGOC <span className='body-sm text-body-darker! transition-colors hover:text-white!'>/ @ngocla99</span>
@@ -95,7 +112,7 @@ export function ProfileSection() {
           </ButtonLink>
         </p>
       </div>
-      <TimelineWork className='mt-14 w-full bio-text-shadow' />
+      <TimelineWork className='mt-14 w-full bio-text-shadow' onNavigate={handleNavigation} />
       <h2 className='custom-h2'>Elsewhere</h2>
       <div className='grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8'>
         <ButtonLink href='https://www.linkedin.com/in/ngocla99' target='_blank'>

@@ -47,7 +47,7 @@ const timelineData: TimelineItemData[] = [
   },
 ];
 
-export function TimelineWork({ className }: { className?: string }) {
+export function TimelineWork({ className, onNavigate }: { className?: string; onNavigate?: (path: string) => void }) {
   return (
     <Timeline orientation='horizontal' className={cn("min-h-40 relative", className)}>
       {timelineData.map((item, index) => (
@@ -99,12 +99,12 @@ export function TimelineWork({ className }: { className?: string }) {
           </TimelineContent>
         </TimelineItem>
       ))}
-      <Link
-        href='/projects'
-        className='-right-6 h-full bg-gradient-to-r from-transparent to-black to-80% pl-24 pr-4 md:pl-12 md:pr-0 absolute -top-1 z-20 translate-y-[0.5px] whitespace-nowrap text-right font-proto text-sm text-body-dark outline-none transition-all hover:text-white focus:text-accent focus-visible:rounded-lg focus-visible:ring-1 focus-visible:ring-accent md:right-0 md:active:scale-95'
+      <a
+        onClick={() => onNavigate?.("/projects")}
+        className='-right-6 cursor-pointer h-full bg-gradient-to-r from-transparent to-black to-80% pl-24 pr-4 md:pl-12 md:pr-0 absolute -top-1 z-20 translate-y-[0.5px] whitespace-nowrap text-right font-proto text-sm text-body-dark outline-none transition-all hover:text-white focus:text-accent focus-visible:rounded-lg focus-visible:ring-1 focus-visible:ring-accent md:right-0 md:active:scale-95'
       >
         All →
-      </Link>
+      </a>
     </Timeline>
   );
 }
