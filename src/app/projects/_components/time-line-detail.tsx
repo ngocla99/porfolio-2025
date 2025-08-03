@@ -1,9 +1,13 @@
 "use client";
 
 import React from "react";
-import { Timeline } from "@/components/ui-animate/timeline";
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+const Timeline = dynamic(() => import("@/components/ui-animate/timeline").then((mod) => ({ default: mod.Timeline })), {
+  ssr: false,
+});
 
 function DescriptionItem({
   logo,

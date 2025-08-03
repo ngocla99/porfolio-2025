@@ -13,7 +13,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    if (ref.current) {
+    if (typeof window !== 'undefined' && ref.current) {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
