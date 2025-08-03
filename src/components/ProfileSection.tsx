@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { TimelineWork } from "./TimelineWork";
 import { ButtonLink } from "./ui/button-link";
@@ -14,7 +15,7 @@ export function ProfileSection() {
       className='flex flex-col items-start pt-12'
     >
       <div className='relative bio-text-shadow'>
-        <div className='hidden sm:block absolute top-5 right-[-285px] w-full h-full'>
+        <div className={cn("hidden sm:block absolute bg-transparent top-5 right-[-300px] w-full h-full")}>
           <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
         </div>
         <h1 className='custom-h1'>
@@ -53,8 +54,8 @@ export function ProfileSection() {
                 fill='none'
                 stroke='currentColor'
                 strokeWidth='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeLinecap='round'
+                strokeLinejoin='round'
               >
                 <path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'></path>
                 <polyline points='22,6 12,13 2,6'></polyline>
@@ -69,9 +70,9 @@ export function ProfileSection() {
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
-                stroke-width='2'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
                 style={{ opacity: 1, transform: "none" }}
               >
                 <rect x='9' y='9' width='13' height='13' rx='2' ry='2'></rect>
