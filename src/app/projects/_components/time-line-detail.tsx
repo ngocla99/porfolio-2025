@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Timeline } from "@/components/ui-animate/timeline";
 import { cn } from "@/lib/utils";
@@ -86,7 +88,7 @@ export function TimelineDetail({ className }: { className?: string }) {
               <br />- Deployed the website to the server using GitLab CI/CD and Docker
             </>
           }
-          technologies='Technologies: ReactJs · Redux-Saga · Ant Design · Styles Components · ChartJs · NodeJs · MongoDB · Elasticsearch · Docker'
+          technologies='Technologies: ReactJs · Redux-Saga · Ant Design · Styles Components · ChartJs · NodeJs · MongoDB · Elasticsearch'
         />
       ),
     },

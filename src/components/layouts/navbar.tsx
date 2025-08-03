@@ -3,10 +3,11 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import Link from "next/link";
 import { ButtonLink } from "../ui/button-link";
+import { cn } from "@/lib/utils";
 
-export function Navbar() {
+export function Navbar({ className }: { className?: string }) {
   return (
-    <nav className='mx-auto flex max-w-[696px] items-center justify-between gap-4 p-6 md:mt-12'>
+    <nav className={cn("mx-auto flex max-w-[696px] items-center justify-between gap-4 p-6 md:mt-12", className)}>
       <Link
         className='relative -left-2 inline-block origin-center text-4xl outline-none transition-all hover:-rotate-3 focus-visible:rounded-xl focus-visible:ring-2 focus-visible:ring-accent active:scale-95'
         href='/'
