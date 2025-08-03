@@ -1,13 +1,9 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-
-const Timeline = dynamic(() => import("@/components/ui-animate/timeline").then((mod) => ({ default: mod.Timeline })), {
-  ssr: false,
-});
+import { Timeline } from "@/components/ui-animate/timeline";
 
 function DescriptionItem({
   logo,
@@ -139,7 +135,7 @@ export function TimelineDetail({ className }: { className?: string }) {
     },
   ];
   return (
-    <div className={cn("relative w-full overflow-clip", className)}>
+    <div className={cn("relative w-full", className)}>
       <Timeline data={data} />
     </div>
   );

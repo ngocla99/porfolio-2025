@@ -1,9 +1,13 @@
 "use client";
 
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ButtonLink } from "../ui/button-link";
 import { cn } from "@/lib/utils";
+
+const Player = dynamic(() => import("@lottiefiles/react-lottie-player").then((mod) => ({ default: mod.Player })), {
+  ssr: false,
+});
 
 export function Navbar({ className }: { className?: string }) {
   return (
