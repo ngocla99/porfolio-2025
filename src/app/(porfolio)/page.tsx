@@ -1,7 +1,7 @@
 // import { FooterSection } from "@/components/FooterSection";
 // import { JournalSection } from "@/components/JournalSection";
 // import { NewsletterSection } from "@/components/NewsletterSection";
-import { ProfileSection } from "@/components/ProfileSection";
+import { ProfileSection } from "@/app/(porfolio)/_components/ProfileSection";
 // import { ProjectsSection } from "@/components/ProjectsSection";
 
 export default function Home() {

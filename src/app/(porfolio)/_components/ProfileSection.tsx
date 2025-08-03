@@ -1,21 +1,24 @@
 "use client";
 
+import { ButtonLink } from "@/components/ui/button-link";
+import { Orb } from "@/components/ui/orb";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { TimelineWork } from "./TimelineWork";
-import { ButtonLink } from "./ui/button-link";
-import Orb from "./ui/orb";
 
 export function ProfileSection() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       className='flex flex-col items-start pt-12'
     >
       <div className='relative bio-text-shadow'>
-        <div className={cn("hidden sm:block absolute bg-transparent top-5 right-[-300px] w-full h-full")}>
+        <div
+          className={cn("hidden sm:block absolute bg-transparent top-5 right-[-300px] w-full h-full overflow-hidden")}
+        >
           <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
         </div>
         <h1 className='custom-h1'>

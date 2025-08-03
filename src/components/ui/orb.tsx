@@ -1,22 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec3 } from "ogl";
+import { cn } from "@/lib/utils";
 
-interface OrbProps {
-  hue?: number;
-  hoverIntensity?: number;
-  rotateOnHover?: boolean;
-  forceHoverState?: boolean;
-}
-
-export default function Orb({
-  hue = 0,
-  hoverIntensity = 0.2,
-  rotateOnHover = true,
-  forceHoverState = false,
-}: OrbProps) {
-  const ctnDom = useRef<HTMLDivElement>(null);
-
-  const vert = /* glsl */ `
+const vert = /* glsl */ `
     precision highp float;
     attribute vec2 position;
     attribute vec2 uv;
@@ -25,9 +11,9 @@ export default function Orb({
       vUv = uv;
       gl_Position = vec4(position, 0.0, 1.0);
     }
-  `;
+`;
 
-  const frag = /* glsl */ `
+const frag = /* glsl */ `
     precision highp float;
 
     uniform float iTime;
@@ -173,7 +159,24 @@ export default function Orb({
       vec4 col = mainImage(fragCoord);
       gl_FragColor = vec4(col.rgb * col.a, col.a);
     }
-  `;
+`;
+
+interface OrbProps {
+  hue?: number;
+  hoverIntensity?: number;
+  rotateOnHover?: boolean;
+  forceHoverState?: boolean;
+  className?: string;
+}
+
+export function Orb({
+  hue = 0,
+  hoverIntensity = 0.2,
+  rotateOnHover = true,
+  forceHoverState = false,
+  className,
+}: OrbProps) {
+  const ctnDom = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = ctnDom.current;
@@ -182,6 +185,9 @@ export default function Orb({
     const renderer = new Renderer({ alpha: true, premultipliedAlpha: false });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
+
+    // Prevent white flash by setting transparent background immediately
+    gl.canvas.style.background = 'transparent';
     container.appendChild(gl.canvas);
 
     const geometry = new Triangle(gl);
@@ -265,6 +271,9 @@ export default function Orb({
 
       renderer.render({ scene: mesh });
     };
+
+    // Render immediately to prevent any flash
+    renderer.render({ scene: mesh });
     rafId = requestAnimationFrame(update);
 
     return () => {
@@ -277,5 +286,5 @@ export default function Orb({
     };
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
-  return <div ref={ctnDom} className='w-full h-full' />;
+  return <div ref={ctnDom} className={cn("w-full h-full", className)} />;
 }
