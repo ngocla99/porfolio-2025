@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { TimelineWork } from "./time-line-work";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function ProfileSection() {
   // FIXME: This is a hack to prevent white flash when the user navigates to the projects page
@@ -116,21 +117,27 @@ export function ProfileSection() {
       <h2 className='custom-h2'>Elsewhere</h2>
       <div className='grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8'>
         <ButtonLink href='https://www.linkedin.com/in/ngocla99' target='_blank'>
-          LINKEDIN
+          Linkedin
         </ButtonLink>
         <ButtonLink href='https://github.com/ngocla99' target='_blank'>
-          GITHUB
+          Github
         </ButtonLink>
-        <ButtonLink href='https://read.cv/ngocla99' target='_blank'>
-          READ.CV
+        <ButtonLink href='/pdf/resume.pdf' target='_blank'>
+          Read.CV
         </ButtonLink>
         <ButtonLink href='https://www.facebook.com/ngocla99' target='_blank'>
-          FACEBOOK
+          Facebook
         </ButtonLink>
         <ButtonLink href='https://x.com/ngoclias_213' target='_blank'>
-          TWITTER
+          Twitter
         </ButtonLink>
-        <div className='font-proto text-body'>ngocla99</div>
+        <Link
+          className='font-proto text-body'
+          href='https://coconut-challenge-804.notion.site/c20324b9c75e48b7812fbea7ac9f413e?v=957f901bab2f4d848a2cc698ac3fc115&pvs=74'
+          target='_blank'
+        >
+          ngocla99
+        </Link>
       </div>
     </motion.section>
   );

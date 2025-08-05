@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Timeline } from "@/components/ui-animate/timeline";
+import Link from "next/link";
 
 function DescriptionItem({
   logo,
@@ -13,6 +14,7 @@ function DescriptionItem({
   responsibilities,
   technologies,
   className,
+  link,
 }: {
   logo: string;
   company: string;
@@ -21,6 +23,7 @@ function DescriptionItem({
   responsibilities: string | React.ReactNode;
   technologies: string | React.ReactNode;
   className?: string;
+  link: string;
 }) {
   return (
     <div className={cn("grid gap-2", className)}>
@@ -32,12 +35,16 @@ function DescriptionItem({
           height={24}
           className='size-6 border border-[#dedede] rounded-md object-contain bg-white'
         />
-        <h3 className='outline-none transition-all hover:text-accent focus-visible:ring-1 focus-visible:ring-accent active:scale-95'>
+        <Link
+          href={link}
+          className='outline-none cursor-pointer transition-all hover:text-accent focus-visible:ring-1 focus-visible:ring-accent active:scale-95'
+          target='_blank'
+        >
           {company}{" "}
           <span className='relative -ml-8 text-sm text-body-dark md:ml-0 md:text-base'>
             <span className='hidden sm:inline'>&nbsp;·&nbsp; </span> {position}
           </span>
-        </h3>
+        </Link>
       </div>
       <p className='text-sm text-body-dark'>{description}</p>
       <p className='text-pretty whitespace-pre-wrap text-sm text-body md:text-base'>{responsibilities}</p>
@@ -68,6 +75,7 @@ export function TimelineDetail({ className }: { className?: string }) {
             </>
           }
           technologies='Technologies: ReactJs · Tailwind · Material-UI · GraphQL · NodeJs · MongoDB · Docker · Kubernetes'
+          link='https://www.ewoosoft.com/'
         />
       ),
     },
@@ -89,6 +97,7 @@ export function TimelineDetail({ className }: { className?: string }) {
             </>
           }
           technologies='Technologies: ReactJs · Redux-Saga · Ant Design · Styles Components · ChartJs · NodeJs · MongoDB · Elasticsearch'
+          link='https://viettelcybersecurity.com/'
         />
       ),
     },
@@ -109,6 +118,7 @@ export function TimelineDetail({ className }: { className?: string }) {
             </>
           }
           technologies='Technologies: Angular · SQL · Boostrap5 · HTML5/CSS3'
+          link='https://fptsoftware.com/'
         />
       ),
     },
@@ -130,6 +140,7 @@ export function TimelineDetail({ className }: { className?: string }) {
             </>
           }
           technologies='Technologies: Angular · ReactJS · Figma · Bootstrap5 · HTML5/CSS3'
+          link='https://fptsoftware.com/'
         />
       ),
     },
