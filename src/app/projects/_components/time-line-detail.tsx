@@ -41,8 +41,8 @@ function DescriptionItem({
           target='_blank'
         >
           {company}{" "}
-          <span className='relative -ml-8 text-sm text-body-dark md:ml-0 md:text-base'>
-            <span className='hidden sm:inline'>&nbsp;·&nbsp; </span> {position}
+          <span className='text-sm text-body-dark md:ml-0 md:text-base'>
+            <span className=''>&nbsp;·&nbsp; </span> {position}
           </span>
         </Link>
       </div>
