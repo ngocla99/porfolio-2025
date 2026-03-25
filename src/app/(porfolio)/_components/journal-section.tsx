@@ -17,8 +17,7 @@ const posts = [
     date: "Jan 9, 2024",
   },
   {
-    title:
-      "Displaying the weekly downloads count of your NPM package on your Next.js website",
+    title: "Displaying the weekly downloads count of your NPM package on your Next.js website",
     date: "Jun 2, 2024",
   },
 ];

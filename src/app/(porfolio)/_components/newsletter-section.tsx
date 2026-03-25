@@ -18,13 +18,9 @@ export function NewsletterSection() {
     >
       <h2 className="custom-h2 mb-4">Newsletter</h2>
       <p className="mb-4 text-muted-foreground">
-        Get notified when I write something new or launch a new project right
-        into your inbox.
+        Get notified when I write something new or launch a new project right into your inbox.
       </p>
-      <form
-        className="flex gap-2 max-w-md"
-        onSubmit={(e) => e.preventDefault()}
-      >
+      <form className="flex gap-2 max-w-md" onSubmit={(e) => e.preventDefault()}>
         <Input
           type="email"
           placeholder="your@email.com"

@@ -27,7 +27,7 @@ function Timeline({
   return (
     <TimelineContext.Provider value={{ orientation }}>
       <ol
-        role='list'
+        role="list"
         data-orientation={orientation}
         className={cn("flex", orientation === "vertical" && "flex-col", className)}
         {...props}
@@ -77,7 +77,7 @@ function TimelineDot({
         orientation === "vertical" && "mt-1",
         variant === "default" && "empty:after:size-2.5 empty:after:bg-current",
         variant === "outline" && "empty:after:size-2",
-        className
+        className,
       )}
       {...props}
     />
@@ -94,7 +94,7 @@ function TimelineConnector({ className, ...props }: React.ComponentProps<"div">)
         "flex-1 bg-body-darker/50",
         orientation === "vertical" && "my-2 w-0.5",
         orientation === "horizontal" && "mx-2 h-0.5",
-        className
+        className,
       )}
       {...props}
     />
@@ -111,7 +111,7 @@ function TimelineContent({ className, ...props }: React.ComponentProps<"div">) {
         "flex-1",
         orientation === "vertical" && "pb-7 first:text-right last:text-left",
         orientation === "horizontal" && "pr-7",
-        className
+        className,
       )}
       {...props}
     />
@@ -128,7 +128,11 @@ function TimelineDescription({ className, ...props }: React.ComponentProps<"div"
   const { orientation } = useTimeline();
 
   return (
-    <div data-orientation={orientation} className={cn("text-[0.8em] text-muted-foreground", className)} {...props} />
+    <div
+      data-orientation={orientation}
+      className={cn("text-[0.8em] text-muted-foreground", className)}
+      {...props}
+    />
   );
 }
 

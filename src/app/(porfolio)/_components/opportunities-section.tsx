@@ -60,12 +60,7 @@ export function OpportunitiesSection() {
         </div>
         <p className="pl-0.5 body-sm text-accent">
           Want to discuss opportunities? <br />
-          <span
-            className={cn(
-              "block",
-              (emailHovered || copyHovered) && "text-white"
-            )}
-          >
+          <span className={cn("block", (emailHovered || copyHovered) && "text-white")}>
             {getTextHover()}
           </span>
         </p>

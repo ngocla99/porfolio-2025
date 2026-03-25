@@ -187,7 +187,7 @@ export function Orb({
     gl.clearColor(0, 0, 0, 0);
 
     // Prevent white flash by setting transparent background immediately
-    gl.canvas.style.background = 'transparent';
+    gl.canvas.style.background = "transparent";
     container.appendChild(gl.canvas);
 
     const geometry = new Triangle(gl);
@@ -216,7 +216,11 @@ export function Orb({
       renderer.setSize(width * dpr, height * dpr);
       gl.canvas.style.width = width + "px";
       gl.canvas.style.height = height + "px";
-      program.uniforms.iResolution.value.set(gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height);
+      program.uniforms.iResolution.value.set(
+        gl.canvas.width,
+        gl.canvas.height,
+        gl.canvas.width / gl.canvas.height,
+      );
     }
     window.addEventListener("resize", resize);
     resize();

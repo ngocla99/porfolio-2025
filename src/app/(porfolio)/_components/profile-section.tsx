@@ -53,22 +53,18 @@ export function ProfileSection() {
           with 4+ years experience.
         </p>
         <p className="body-lg text-balance max-w-[390px] text-body">
-          Building responsive applications that deliver exceptional user
-          experiences with modern technologies and clean code practices.
+          Building responsive applications that deliver exceptional user experiences with modern
+          technologies and clean code practices.
         </p>
         <p className="body-lg text-balance mt-6 max-w-[450px] text-body">
           I&apos;m the person who can{" "}
-          <span className="text-white">quickly adapt to new technologies</span>{" "}
-          and take ownership of tasks to{" "}
-          <span className="text-white">deliver high-quality solutions</span>{" "}
-          that exceed expectations. ✨
+          <span className="text-white">quickly adapt to new technologies</span> and take ownership
+          of tasks to <span className="text-white">deliver high-quality solutions</span> that exceed
+          expectations. ✨
         </p>
       </div>
       <OpportunitiesSection />
-      <TimelineWork
-        className="mt-14 w-full bio-text-shadow"
-        onNavigate={handleNavigation}
-      />
+      <TimelineWork className="mt-14 w-full bio-text-shadow" onNavigate={handleNavigation} />
       <h2 className="custom-h2">Elsewhere</h2>
       <div className="grid grid-cols-2 gap-8 md:flex md:flex-row md:flex-wrap md:gap-8">
         <ButtonLink href="https://www.linkedin.com/in/ngocla99" target="_blank">

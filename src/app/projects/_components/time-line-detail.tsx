@@ -27,28 +27,30 @@ function DescriptionItem({
 }) {
   return (
     <div className={cn("grid gap-2", className)}>
-      <div className='flex items-center gap-2 mb-2'>
+      <div className="flex items-center gap-2 mb-2">
         <Image
           src={logo}
           alt={company}
           width={24}
           height={24}
-          className='size-6 border border-[#dedede] rounded-md object-contain bg-white'
+          className="size-6 border border-[#dedede] rounded-md object-contain bg-white"
         />
         <Link
           href={link}
-          className='outline-none cursor-pointer transition-all hover:text-accent focus-visible:ring-1 focus-visible:ring-accent active:scale-95'
-          target='_blank'
+          className="outline-none cursor-pointer transition-all hover:text-accent focus-visible:ring-1 focus-visible:ring-accent active:scale-95"
+          target="_blank"
         >
           {company}{" "}
-          <span className='text-sm text-body-dark md:ml-0 md:text-base'>
-            <span className=''>&nbsp;·&nbsp; </span> {position}
+          <span className="text-sm text-body-dark md:ml-0 md:text-base">
+            <span className="">&nbsp;·&nbsp; </span> {position}
           </span>
         </Link>
       </div>
-      <p className='text-sm text-body-dark'>{description}</p>
-      <p className='text-pretty whitespace-pre-wrap text-sm text-body md:text-base'>{responsibilities}</p>
-      <p className='text-sm text-body-dark'>{technologies}</p>
+      <p className="text-sm text-body-dark">{description}</p>
+      <p className="text-pretty whitespace-pre-wrap text-sm text-body md:text-base">
+        {responsibilities}
+      </p>
+      <p className="text-sm text-body-dark">{technologies}</p>
     </div>
   );
 }
@@ -59,23 +61,26 @@ export function TimelineDetail({ className }: { className?: string }) {
       title: "2023 - Present",
       content: (
         <DescriptionItem
-          logo='/logo/ewoosoft.png'
-          company='Ewoosoft'
-          position='Full-stack Developer'
-          description='Built a comprehensive dental clinic management website supporting multilingual capabilities. The platform
-            tracks and manages statistics related to partners, prostheses, payments, and employees.'
+          logo="/logo/ewoosoft.png"
+          company="Ewoosoft"
+          position="Full-stack Developer"
+          description="Built a comprehensive dental clinic management website supporting multilingual capabilities. The platform
+            tracks and manages statistics related to partners, prostheses, payments, and employees."
           responsibilities={
             <>
               Key Achievements:
-              <br />- designed and developed scalable, reusable UI components, improving feature development efficiency
-              by 20 and reducing build time by 50%
-              <br />- optimized large list rendering on the frontend, achieving 80-95% faster load times
-              <br />- enhanced backend API performance, resulting in a 40-50% reduction in load times
-              <br />- built backend API functions and endpoints, migrated databases, and resolved production issues
+              <br />- designed and developed scalable, reusable UI components, improving feature
+              development efficiency by 20 and reducing build time by 50%
+              <br />- optimized large list rendering on the frontend, achieving 80-95% faster load
+              times
+              <br />- enhanced backend API performance, resulting in a 40-50% reduction in load
+              times
+              <br />- built backend API functions and endpoints, migrated databases, and resolved
+              production issues
             </>
           }
-          technologies='Technologies: ReactJs · Tailwind · Material-UI · GraphQL · NodeJs · MongoDB · Docker · Kubernetes'
-          link='https://www.ewoosoft.com/'
+          technologies="Technologies: ReactJs · Tailwind · Material-UI · GraphQL · NodeJs · MongoDB · Docker · Kubernetes"
+          link="https://www.ewoosoft.com/"
         />
       ),
     },
@@ -83,21 +88,21 @@ export function TimelineDetail({ className }: { className?: string }) {
       title: "Aug 2022 - Mar 2023",
       content: (
         <DescriptionItem
-          logo='/logo/viettel.png'
-          company='Viettel Security'
-          position='Frontend Developer'
-          description='In-sourced at Viettel Security (via FPT Software), joining a team that builds a product security platform to track statistics and issue warnings for user behaviors within organizations.'
+          logo="/logo/viettel.png"
+          company="Viettel Security"
+          position="Frontend Developer"
+          description="In-sourced at Viettel Security (via FPT Software), joining a team that builds a product security platform to track statistics and issue warnings for user behaviors within organizations."
           responsibilities={
             <>
               Responsibilities:
-              <br />- Solely responsible for the front-end site, developing new features and renewing all old web
-              designs
+              <br />- Solely responsible for the front-end site, developing new features and
+              renewing all old web designs
               <br />- Ensured code quality by scanning libraries with SonarQube and other SCA tools
               <br />- Deployed the website to the server using GitLab CI/CD and Docker
             </>
           }
-          technologies='Technologies: ReactJs · Redux-Saga · Ant Design · Styles Components · ChartJs · NodeJs · MongoDB · Elasticsearch'
-          link='https://viettelcybersecurity.com/'
+          technologies="Technologies: ReactJs · Redux-Saga · Ant Design · Styles Components · ChartJs · NodeJs · MongoDB · Elasticsearch"
+          link="https://viettelcybersecurity.com/"
         />
       ),
     },
@@ -105,20 +110,21 @@ export function TimelineDetail({ className }: { className?: string }) {
       title: "Jan 2022 - Aug 2022",
       content: (
         <DescriptionItem
-          logo='/logo/fsoft.png'
-          company='FPT Software'
-          position='Frontend Developer'
-          description='Migrated DEN system from Flex to HTML/Angular.'
+          logo="/logo/fsoft.png"
+          company="FPT Software"
+          position="Frontend Developer"
+          description="Migrated DEN system from Flex to HTML/Angular."
           responsibilities={
             <>
               Responsibilities:
               <br />- Successfully migrated legacy Flex system to modern HTML/Angular architecture
               <br />- Created consistent and efficient UI components for the new system
-              <br />- Contributed to the project&apos;s foundation and assisted team members with complex tasks
+              <br />- Contributed to the project&apos;s foundation and assisted team members with
+              complex tasks
             </>
           }
-          technologies='Technologies: Angular · SQL · Boostrap5 · HTML5/CSS3'
-          link='https://fptsoftware.com/'
+          technologies="Technologies: Angular · SQL · Boostrap5 · HTML5/CSS3"
+          link="https://fptsoftware.com/"
         />
       ),
     },
@@ -126,10 +132,10 @@ export function TimelineDetail({ className }: { className?: string }) {
       title: "Jun 2021 - Jan 2022",
       content: (
         <DescriptionItem
-          logo='/logo/fsoft.png'
-          company='FPT Software'
-          position='Fresher Developer'
-          description='Led two mock projects: a Shopping Cart and a Blog App. As the team leader, I assigned tasks, built the base projects, supported team members, and learned collaboratively throughout the development process.'
+          logo="/logo/fsoft.png"
+          company="FPT Software"
+          position="Fresher Developer"
+          description="Led two mock projects: a Shopping Cart and a Blog App. As the team leader, I assigned tasks, built the base projects, supported team members, and learned collaboratively throughout the development process."
           responsibilities={
             <>
               Responsibilities:
@@ -139,8 +145,8 @@ export function TimelineDetail({ className }: { className?: string }) {
               <br />- Developed skills in front-end web development across multiple frameworks
             </>
           }
-          technologies='Technologies: Angular · ReactJS · Figma · Bootstrap5 · HTML5/CSS3'
-          link='https://fptsoftware.com/'
+          technologies="Technologies: Angular · ReactJS · Figma · Bootstrap5 · HTML5/CSS3"
+          link="https://fptsoftware.com/"
         />
       ),
     },

@@ -6,7 +6,7 @@ import { ProfileSection } from "@/app/(porfolio)/_components/profile-section";
 
 export default function Home() {
   return (
-    <main className='mx-auto max-w-[696px] p-6 pb-12'>
+    <main className="mx-auto max-w-[696px] p-6 pb-12">
       <ProfileSection />
       {/* <ProjectsSection className='mt-16' /> */}
       {/* <JournalSection />

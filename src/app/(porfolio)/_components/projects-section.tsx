@@ -25,8 +25,7 @@ const projects = [
   },
   {
     name: "metadata.vision",
-    description:
-      "Free public API for grabbing OG metadata from any URL as JSON.",
+    description: "Free public API for grabbing OG metadata from any URL as JSON.",
     stats: "1.8M URLs served",
   },
 ];
@@ -45,12 +44,8 @@ export function ProjectsSection({ className }: { className?: string }) {
         {projects.map((project) => (
           <Card key={project.name} className="p-4 flex flex-col gap-2">
             <div className="font-bold text-lg">{project.name}</div>
-            <div className="text-muted-foreground text-sm">
-              {project.description}
-            </div>
-            <div className="text-xs mt-2 text-primary font-mono">
-              {project.stats}
-            </div>
+            <div className="text-muted-foreground text-sm">{project.description}</div>
+            <div className="text-xs mt-2 text-primary font-mono">{project.stats}</div>
           </Card>
         ))}
       </div>
