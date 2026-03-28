@@ -50,7 +50,7 @@ export function ProfileSection() {
         </h1>
         <p className="my-4 font-proto text-xl leading-[1.35em] sm:text-2xl">
           Frontend Specialist <br />
-          with 4+ years experience.
+          with 5+ years experience.
         </p>
         <p className="body-lg text-balance max-w-[390px] text-body">
           Building responsive applications that deliver exceptional user experiences with modern
@@ -90,6 +90,20 @@ export function ProfileSection() {
           ngocla99
         </Link>
       </div>
+      <footer className="w-full pt-12 text-center font-proto text-xs text-body-dark">
+        <p className="text-2xl text-body-darker">✦</p>
+        <p className="pb-3 pt-2">
+          The structure and design of this site has been inspired by{" "}
+          <Link
+            href="https://wojtek.im"
+            target="_blank"
+            className="text-accent transition-colors hover:text-white"
+          >
+            wojtek.im
+          </Link>
+          .
+        </p>
+      </footer>
     </motion.section>
   );
 }

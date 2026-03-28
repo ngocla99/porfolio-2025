@@ -1,10 +1,16 @@
+'use client'
+
 import { ButtonCopy } from "@/components/ui/button-copy";
 import { ButtonLink } from "@/components/ui/button-link";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import React from "react";
 
-export function OpportunitiesSection() {
+export function OpportunitiesSection({
+  hideFooterLink = false,
+}: {
+  hideFooterLink?: boolean;
+}) {
   const [emailHovered, setEmailHovered] = React.useState(false);
   const [copyHovered, setCopyHovered] = React.useState(false);
 
@@ -65,12 +71,14 @@ export function OpportunitiesSection() {
           </span>
         </p>
       </div>
-      <p className="text-balance flex items-center gap-2.5 pt-5 font-proto text-xs text-body sm:gap-2 sm:text-sm">
-        or you can{" "}
-        <ButtonLink className="text-friends text-sm" href="/projects">
-          see my work
-        </ButtonLink>
-      </p>
+      {!hideFooterLink && (
+        <p className="text-balance flex items-center gap-2.5 pt-5 font-proto text-xs text-body sm:gap-2 sm:text-sm">
+          you can{" "}
+          <ButtonLink className="text-friends text-sm" href="/projects">
+            see my work
+          </ButtonLink>
+        </p>
+      )}
     </div>
   );
 }
